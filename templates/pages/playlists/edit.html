@@ -1,0 +1,35 @@
+{% extends 'layouts/app.html' %}
+{% load static %}
+
+{% block title %}
+	Django Marmut
+{% endblock %}
+
+{% block content %}
+	<div class="flex space-x-6 items-center mb-10">
+		<div class="w-full h-px bg-neutral-900"></div>
+		<h1 class="text-xl whitespace-nowrap">Edit Playlist</h1>
+		<div class="w-full h-px bg-neutral-900"></div>
+	</div>
+
+	<div class="bg-neutral-200 p-8 rounded-xl custom-shadow mb-10">
+		<form action="#" method="post" class="min-h-[500px] flex flex-col items-center justify-center">
+			{% csrf_token %}
+			<div class="flex flex-col w-full max-w-lg mx-auto">
+				<div class="mb-4">
+					<label for="name" class="custom-label">Playlist Name</label>
+					<input type="name" name="name" id="name" class="custom-input bg-secondary custom-shadow-sm" placeholder="Playlist Name" value="This is a playlist name" />
+				</div>
+
+				<div class="mb-6">
+					<label for="text" class="custom-label">Playlist Description</label>
+					<textarea name="text" id="text" class="custom-input bg-secondary custom-shadow-sm" placeholder="Playlist Description">This is a playlist description</textarea>
+				</div>
+
+				<div class="flex justify-center">
+					<button type="submit" class="custom-button bg-neutral-500 custom-shadow-sm">Edit</button>
+				</div>
+			</div>
+		</form>
+	</div>
+{% endblock %}

@@ -1,0 +1,19 @@
+<div class="w-content py-4">
+	<div class="px-6 py-4 rounded-xl border-2 border-tertiary bg-gradient-to-r from-primary to-secondary">
+		<div class="flex items-center space-x-4">
+			{% if request.path == '/register/' %}
+				<a href="{% url 'app:register' %}" class="text-xl font-medium opacity-50">Sign Up</a>
+			{% else %}
+				<a href="{% url 'app:register' %}" class="text-xl font-medium">Sign Up</a>
+			{% endif %}
+
+			<div class="w-0.5 h-8 bg-tertiary"></div>
+
+			{% if request.path == '/login/' %}
+				<a href="{% url 'app:login' %}" class="text-xl font-medium opacity-50">Log In</a>
+			{% else %}
+				<a href="{% url 'app:login' %}" class="text-xl font-medium">Log In</a>
+			{% endif %}
+		</div>
+	</div>
+</div>

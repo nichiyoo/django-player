@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>
+			{% block title %}
+				Django Marmut
+			{% endblock %}
+		</title>
+
+		{% comment %}google fonts{% endcomment %}
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&display=swap" rel="stylesheet" />
+
+		{% comment %}tailwind.css{% endcomment %}
+		<link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+		<script type="text/javascript" src="{% static 'js/index.js' %}" defer></script>
+	</head>
+
+	<body class="bg-white text-neutral-900 antialiased leading-5 antialiased font-serif min-h-screen">
+		<nav class="mb-6">
+			{% include 'partials/guest/navbar.html' %}
+		</nav>
+
+		<main class="w-content">
+			<div class="grid lg:grid-cols-3 gap-6 min-h-[80vh]">
+				<div class="hidden lg:block text-tertiary">
+					<div class="bg-secondary rounded-extra h-full flex flex-col space-y-6 items-center justify-center">
+						<h2 class="text-2xl text-medium uppercase">Welcome to</h2>
+						<div class="bg-white rounded-xl border-2 border-tertiary w-40 aspect-square flex items-center justify-center">
+							<img src="{% static 'images/logo.png' %}" alt="logo" class="w-24" />
+						</div>
+						<h2 class="text-2xl text-medium uppercase">Marmut</h2>
+					</div>
+				</div>
+
+				<div class="lg:col-span-2">
+					{% block content %}
+
+					{% endblock %}
+				</div>
+			</div>
+		</main>
+	</body>
+</html>

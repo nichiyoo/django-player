@@ -1,0 +1,118 @@
+{% extends 'layouts/app.html' %}
+{% load static %}
+
+{% block title %}
+	Django Marmut
+{% endblock %}
+
+{% block content %}
+	<div class="flex space-x-6 items-center mb-10">
+		<div class="w-full h-px bg-neutral-900"></div>
+		<h1 class="text-xl whitespace-nowrap">Your Playlist</h1>
+		<div class="w-full h-px bg-neutral-900"></div>
+	</div>
+
+	<div class="bg-neutral-200 p-8 rounded-xl custom-shadow mb-10">
+		<div class="grid grid-cols-2 gap-8">
+			<div class="bg-neutral-500 rounded-xl p-8 custom-shadow flex flex-col space-y-4">
+				<h4 class="text-center font-medium text-xl">Fall</h4>
+
+				<div class="flex items-end space-x-4">
+					<h3 class="whitespace-nowrap">Songs</h3>
+					<div class="w-full h-px bg-neutral-900"></div>
+					<h3 class="whitespace-nowrap">32</h3>
+				</div>
+
+				<div class="flex items-end space-x-4">
+					<h3 class="whitespace-nowrap">Duration</h3>
+					<div class="w-full h-px bg-neutral-900"></div>
+					<h3 class="whitespace-nowrap">1h 30m</h3>
+				</div>
+
+				<div class="flex justify-center items-center space-x-4">
+					<a href="{% url 'playlists:view' '1' %}"><button class="bg-neutral-700 px-4 py-2 rounded-lg text-white border-none focus:outline-none focus:ring-0 focus:border-none focus:shadow-none">Detail</button></a>
+
+					<a href="{% url 'playlists:edit' '1' %}"><button class="bg-neutral-700 px-4 py-2 rounded-lg text-white border-none focus:outline-none focus:ring-0 focus:border-none focus:shadow-none">Edit</button></a>
+
+					<button class="bg-neutral-700 px-4 py-2 rounded-lg text-white border-none focus:outline-none focus:ring-0 focus:border-none focus:shadow-none">Delete</button>
+				</div>
+			</div>
+
+			<div class="bg-neutral-500 rounded-xl p-8 custom-shadow flex flex-col space-y-4">
+				<h4 class="text-center font-medium text-xl">Summer</h4>
+
+				<div class="flex items-end space-x-4">
+					<h3 class="whitespace-nowrap">Songs</h3>
+					<div class="w-full h-px bg-neutral-900"></div>
+					<h3 class="whitespace-nowrap">32</h3>
+				</div>
+
+				<div class="flex items-end space-x-4">
+					<h3 class="whitespace-nowrap">Duration</h3>
+					<div class="w-full h-px bg-neutral-900"></div>
+					<h3 class="whitespace-nowrap">1h 30m</h3>
+				</div>
+
+				<div class="flex justify-center items-center space-x-4">
+					<a href="{% url 'playlists:view' '1' %}"><button class="bg-neutral-700 px-4 py-2 rounded-lg text-white border-none focus:outline-none focus:ring-0 focus:border-none focus:shadow-none">Detail</button></a>
+
+					<a href="{% url 'playlists:edit' '1' %}"><button class="bg-neutral-700 px-4 py-2 rounded-lg text-white border-none focus:outline-none focus:ring-0 focus:border-none focus:shadow-none">Edit</button></a>
+
+					<button class="bg-neutral-700 px-4 py-2 rounded-lg text-white border-none focus:outline-none focus:ring-0 focus:border-none focus:shadow-none">Delete</button>
+				</div>
+			</div>
+
+			<div class="bg-neutral-500 rounded-xl p-8 custom-shadow flex flex-col space-y-4">
+				<h4 class="text-center font-medium text-xl">Winter</h4>
+
+				<div class="flex items-end space-x-4">
+					<h3 class="whitespace-nowrap">Songs</h3>
+					<div class="w-full h-px bg-neutral-900"></div>
+					<h3 class="whitespace-nowrap">32</h3>
+				</div>
+
+				<div class="flex items-end space-x-4">
+					<h3 class="whitespace-nowrap">Duration</h3>
+					<div class="w-full h-px bg-neutral-900"></div>
+					<h3 class="whitespace-nowrap">1h 30m</h3>
+				</div>
+
+				<div class="flex justify-center items-center space-x-4">
+					<a href="{% url 'playlists:view' '1' %}"><button class="bg-neutral-700 px-4 py-2 rounded-lg text-white border-none focus:outline-none focus:ring-0 focus:border-none focus:shadow-none">Detail</button></a>
+
+					<a href="{% url 'playlists:edit' '1' %}"><button class="bg-neutral-700 px-4 py-2 rounded-lg text-white border-none focus:outline-none focus:ring-0 focus:border-none focus:shadow-none">Edit</button></a>
+
+					<button class="bg-neutral-700 px-4 py-2 rounded-lg text-white border-none focus:outline-none focus:ring-0 focus:border-none focus:shadow-none">Delete</button>
+				</div>
+			</div>
+
+			<div class="bg-neutral-500 rounded-xl p-8 custom-shadow flex flex-col space-y-4">
+				<h4 class="text-center font-medium text-xl">Spring</h4>
+
+				<div class="flex items-end space-x-4">
+					<h3 class="whitespace-nowrap">Songs</h3>
+					<div class="w-full h-px bg-neutral-900"></div>
+					<h3 class="whitespace-nowrap">32</h3>
+				</div>
+
+				<div class="flex items-end space-x-4">
+					<h3 class="whitespace-nowrap">Duration</h3>
+					<div class="w-full h-px bg-neutral-900"></div>
+					<h3 class="whitespace-nowrap">1h 30m</h3>
+				</div>
+
+				<div class="flex justify-center items-center space-x-4">
+					<a href="{% url 'playlists:view' '1' %}"><button class="bg-neutral-700 px-4 py-2 rounded-lg text-white border-none focus:outline-none focus:ring-0 focus:border-none focus:shadow-none">Detail</button></a>
+
+					<a href="{% url 'playlists:edit' '1' %}"><button class="bg-neutral-700 px-4 py-2 rounded-lg text-white border-none focus:outline-none focus:ring-0 focus:border-none focus:shadow-none">Edit</button></a>
+
+					<button class="bg-neutral-700 px-4 py-2 rounded-lg text-white border-none focus:outline-none focus:ring-0 focus:border-none focus:shadow-none">Delete</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="flex justify-center items-center">
+		<a href="{% url 'playlists:create' %}"><button class="bg-neutral-700 px-4 py-2 rounded-lg text-white border-none focus:outline-none focus:ring-0 focus:border-none focus:shadow-none">Add Playlists</button></a>
+	</div>
+{% endblock %}

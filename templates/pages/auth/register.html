@@ -1,0 +1,82 @@
+{% extends 'layouts/guest.html' %}
+{% load static %}
+
+{% block title %}
+	Sign Up
+{% endblock %}
+
+{% block content %}
+	<div class="flex space-x-6 items-center mb-10">
+		<div class="w-full h-px bg-neutral-900"></div>
+		<h1 class="text-xl whitespace-nowrap">Sign Up</h1>
+		<div class="w-full h-px bg-neutral-900"></div>
+	</div>
+
+	<form action="#" method="post" class="h-full flex flex-col items-center justify-center">
+		{% csrf_token %}
+		<div class="grid grid-cols-2 gap-4 w-full">
+			<div class="flex flex-col space-y-4">
+				<div>
+					<label for="name" class="custom-label">Name</label>
+					<input type="text" name="name" id="name" class="custom-input" placeholder="Name" />
+				</div>
+
+				<div>
+					<label for="email" class="custom-label">Email</label>
+					<input type="email" name="email" id="email" class="custom-input" placeholder="Email" />
+				</div>
+
+				<div>
+					<label for="password" class="custom-label">Password</label>
+					<input type="password" name="password" id="password" class="custom-input" placeholder="Password" />
+				</div>
+
+				<div>
+					<label for="gender" class="custom-label">Gender</label>
+					<select name="gender" id="gender" class="custom-input">
+						<option value="male">Male</option>
+						<option value="female">Female</option>
+					</select>
+				</div>
+
+				<div>
+					<label for="birthplace" class="custom-label">Birthplace</label>
+					<input type="text" name="birthplace" id="birthplace" class="custom-input" placeholder="Birthplace" />
+				</div>
+
+				<div>
+					<label for="date_of_birth" class="custom-label">Date of Birth</label>
+					<input type="date" name="date_of_birth" id="date_of_birth" class="custom-input" placeholder="Date of Birth" />
+				</div>
+
+				<div>
+					<label for="domicile" class="custom-label">Domicile</label>
+					<input type="text" name="domicile" id="domicile" class="custom-input" placeholder="Domicile" />
+				</div>
+			</div>
+
+			<div class="flex flex-col justify-between mb-6 h-full">
+				<div class="space-y-4">
+					<div class="flex items-center space-x-4">
+						<input type="radio" name="type" id="artist" class="radio-input" value="artist" />
+						<input type="text" readonly="readonly" class="custom-input" value="Artist" />
+					</div>
+
+					<div class="flex items-center space-x-4">
+						<input type="radio" name="type" id="podcaster" class="radio-input" value="podcaster" />
+						<input type="text" readonly="readonly" class="custom-input" value="Podcaster" />
+					</div>
+
+					<div class="flex items-center space-x-4">
+						<input type="radio" name="type" id="songwriter" class="radio-input" value="songwriter" />
+						<input type="text" readonly="readonly" class="custom-input" value="Songwriter" />
+					</div>
+				</div>
+
+				<div class="flex justify-center">
+					<button type="submit" class="custom-button bg-secondary text-tertiary">Register</button>
+				</div>
+			</div>
+		</div>
+	</form>
+{% endblock %}

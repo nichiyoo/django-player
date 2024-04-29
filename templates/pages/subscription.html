@@ -1,0 +1,38 @@
+{% extends 'layouts/app.html' %}
+{% load static %}
+
+{% block title %}
+	Django Marmut
+{% endblock %}
+
+{% block content %}
+	<div class="grid lg:grid-cols-3 min-h-[80vh] gap-8">
+		<aside class="hidden lg:block">
+			{% include 'partials/sidebar.html' %}
+		</aside>
+
+		<div class="lg:col-span-2">
+			<div class="h-16 mb-8 flex items-end justify-center">
+				<h1 class="text-xl font-medium">Subscriptions List</h1>
+			</div>
+
+			<div class="bg-neutral-200 p-8 rounded-xl custom-shadow">
+				<div class="grid grid-cols-1 gap-8">
+					{% for subscription in subscriptions %}
+						<div class="bg-neutral-500 rounded-xl p-8 custom-shadow flex flex-col space-y-4">
+							<h4 class="text-center font-medium text-xl">{{ subscription.name }}</h4>
+
+							<ul class="flex flex-col space-y-2">
+								{% for feature in subscription.features %}
+									<li>{{ feature }}</li>
+								{% endfor %}
+							</ul>
+
+							<button class="bg-neutral-700 px-4 py-2 rounded-lg text-white border-none focus:outline-none focus:ring-0 focus:border-none focus:shadow-none">USD {{ subscription.price }}$</button>
+						</div>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}

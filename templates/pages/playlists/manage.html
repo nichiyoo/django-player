@@ -1,0 +1,32 @@
+{% extends 'layouts/app.html' %}
+{% load static %}
+
+{% block title %}
+	Django Marmut
+{% endblock %}
+
+{% block content %}
+	<div class="flex space-x-6 items-center mb-10">
+		<div class="w-full h-px bg-neutral-900"></div>
+		<h1 class="text-xl whitespace-nowrap">Add Song</h1>
+		<div class="w-full h-px bg-neutral-900"></div>
+	</div>
+
+	<div class="bg-neutral-200 p-8 rounded-xl custom-shadow mb-10">
+		<div class="grid grid-cols-4 gap-8">
+			{% for i in 'abcdefghijklmnopqrst'|make_list %}
+				<div class="bg-secondary rounded-xl p-6 custom-shadow-sm flex flex-col space-y-4">
+					<h3 class="whitespace-nowrap text-lg font-medium">
+						<span>Love</span>
+						-
+						<span>Keyshia Cole</span>
+					</h3>
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+
+	<div class="flex justify-center items-center">
+		<button class="bg-neutral-700 px-4 py-2 rounded-lg text-white border-none focus:outline-none focus:ring-0 focus:border-none focus:shadow-none">Submit</button>
+	</div>
+{% endblock %}

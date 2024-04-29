@@ -1,0 +1,33 @@
+{% extends 'layouts/guest.html' %}
+{% load static %}
+
+{% block title %}
+	Sign In
+{% endblock %}
+
+{% block content %}
+	<div class="flex space-x-6 items-center mb-10">
+		<div class="w-full h-px bg-neutral-900"></div>
+		<h1 class="text-xl whitespace-nowrap">Sign In</h1>
+		<div class="w-full h-px bg-neutral-900"></div>
+	</div>
+
+	<form action="#" method="post" class="h-full flex flex-col items-center justify-center">
+		{% csrf_token %}
+		<div class="flex flex-col w-full max-w-lg mx-auto">
+			<div class="mb-4">
+				<label for="email" class="custom-label">Email</label>
+				<input type="email" name="email" id="email" class="custom-input" placeholder="Email" />
+			</div>
+
+			<div class="mb-6">
+				<label for="password" class="custom-label">Password</label>
+				<input type="password" name="password" id="password" class="custom-input" placeholder="Password" />
+			</div>
+
+			<div class="flex justify-center">
+				<button type="submit" class="custom-button bg-secondary text-tertiary">Login</button>
+			</div>
+		</div>
+	</form>
+{% endblock %}
