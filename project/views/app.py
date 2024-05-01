@@ -48,3 +48,6 @@ def subscription(request) -> HttpResponse:
          ] },
     ]
     return render(request, 'pages/subscription.html', {'subscriptions': subscriptions})
+
+def player(request) -> HttpResponse:
+    return render(request, 'pages/player.html')

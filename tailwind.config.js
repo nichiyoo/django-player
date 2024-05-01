@@ -13,6 +13,9 @@ module.exports = {
 			fontFamily: {
 				serif: ['Merriweather', ...fontFamily.serif],
 			},
+			animation: {
+				rotate: 'spin 15s linear infinite',
+			},
 		},
 	},
 	plugins: [require('@tailwindcss/forms')],

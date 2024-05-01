@@ -11,4 +11,5 @@ urlpatterns = [
     path("register-label/", app.register_label, name="register-label"),
     path("dashboard/", app.dashboard, name="dashboard"),
     path("subscription/", app.subscription, name="subscription"),
+    path("player/", app.player, name="player"),
 ]
