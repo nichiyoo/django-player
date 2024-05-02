@@ -37,11 +37,6 @@
 				{% endif %}
 			{% endif %}
 
-			{% if request.GET.role == 'label' %}
-				<a href="#" class="text-xl font-medium">Royalty</a>
-				<div class="w-0.5 h-8 bg-tertiary"></div>
-			{% endif %}
-
 			{% if request.GET.role != 'label' %}
 				{% if request.path == '/subscription/' %}
 					<a href="{% url 'app:subscription' %}" class="text-xl font-medium opacity-50">Subscriptions</a>
@@ -52,8 +47,13 @@
 				{% endif %}
 			{% endif %}
 
+			{% if request.GET.role == 'label' or request.GET.role == 'artist' %}
+				<a href="#" class="text-xl font-medium">Royalty</a>
+				<div class="w-0.5 h-8 bg-tertiary"></div>
+			{% endif %}
+
 			{% if request.GET.role == 'premium' %}
-				<a href="#" class="text-xl font-medium opacity-50">Downloaded</a>
+				<a href="#" class="text-xl font-medium">Downloaded</a>
 				<div class="w-0.5 h-8 bg-tertiary"></div>
 			{% endif %}
 
